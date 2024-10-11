@@ -1,0 +1,63 @@
+
+  
+ 
+  /* Text styles */
+  h1 {
+    color: white; /* Ensure the text color remains solid */
+    font-size: 48px;
+    margin: 0;
+    margin-top: 10%;
+    
+  }
+
+  .save-benefits-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 50px;
+    gap: 50px;
+    
+    /* margin-top: 750px; */
+  }
+  
+  .benefit-item {
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .benefit-item p {
+    color: #555;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  
+  .icon {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .save-benefits-container {
+      flex-direction: column;
+    }
+  
+    .benefit-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  
+  
