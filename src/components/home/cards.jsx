@@ -6,7 +6,7 @@ const Cards = () => {
     <div>
       <div className='w-full min-h-[300px] bg-white flex justify-center items-center'>
 
-        <img src={Image} alt="" className='absolute bottom-0'/>
+        
 
       <div className="container mx-auto p-4">
      
