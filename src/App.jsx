@@ -12,6 +12,8 @@ import User from './pages/user';
 import AboutUs from './pages/aboutus';
 import AdminSignIn from './components/admin/adminsignin';
 import AdminLogin from './components/admin/adminlogin';
+import UserSignIn from './components/user/usersignin';
+import UserLogin from './components/user/userlogin';
 
 import './App.css'; // Importing the CSS styles for the application
 
@@ -32,6 +34,8 @@ function App() {
     <Route path="/adminsignin" element={<AdminSignIn />} />
     <Route path="/adminlogin" element={<AdminLogin />} />
     
+    <Route path="/usersignin" element={<UserSignIn />} />
+    <Route path="/userlogin" element={<UserLogin />} />
   </Routes>
   <Footer></Footer>
 </Router>
