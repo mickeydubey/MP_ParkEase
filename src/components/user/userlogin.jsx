@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CarImage from '../../assets/carillustration.svg'; // Replace with your image path
 
 const UserLogin = () => {
@@ -42,8 +43,8 @@ const UserLogin = () => {
             
             {/* Remember Me & Forgot Password */}
             <div className="flex items-center justify-between text-gray-600">
-            <a href="/usersignin" className="text-blue-500 hover:none">Sign Up</a>
-              <a href="/forgot-password" className="text-blue-500 hover:none">Forgot Password?</a>
+            <Link to="/userignin" className="text-blue-500 hover:none">Sign Up</Link>
+              <Link to="/userforgotpass" className="text-blue-500 hover:none">Forgot Password?</Link>
             </div>
             
             {/* Login Button */}
