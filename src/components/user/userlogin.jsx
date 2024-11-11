@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import CarImage from '../../assets/carillustration.svg'; // Replace with your image path
 
 const UserLogin = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 mt-10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-14">
@@ -49,6 +51,7 @@ const UserLogin = () => {
             
             {/* Login Button */}
             <button
+              onClick={() => navigate('/location')}
               type="submit"
               className="w-full justify-center bg-[#2F3645] text-white p-2 rounded-lg hover:bg-[#2F3645] transition duration-200"
             >
