@@ -23,7 +23,9 @@ import PasswordResetSuccess from './components/admin/passwordresetsucess';
 import Dashboard from './components/admin/dashboard';
 import Profile_Details from './components/admin/setting';
 import Toolbar from './components/admin/vehicle';
-import Tool_bar from './components/admin/manageparking'
+import Tool_bar from './components/admin/manageparking';
+import Revenue from './components/admin/revenue';
+import ParkingDashboard from './components/admin/spaceallotment';
 
 
 import UserSignIn from './components/user/usersignin';
@@ -67,11 +69,13 @@ function App() {
 
     <Route element={<Layout1 />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/spaceallotment" element={<ParkingFeesCard />} />
+          <Route path="/spaceallotment" element={<ParkingDashboard />} />
           <Route path="/vehicle" element={<Toolbar/>} />
           <Route path="/setting" element={<Profile_Details/>} />
-          <Route path="/revenue" element={<ParkingLot/>} />
+          <Route path="/revenue" element={<Revenue/>} />
           <Route path="/manageparking" element={<Tool_bar/>} />
+          
+          
 
         </Route>
 

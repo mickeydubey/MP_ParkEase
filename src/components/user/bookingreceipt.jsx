@@ -6,19 +6,19 @@ import { useNavigate } from 'react-router-dom';
 function BookingReceipt() {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 space-y-4">
+    <div className="flex items-center justify-center min-h-screen  mt-14 px-4">
+      <div className="bg-gray-200 rounded-lg shadow-lg w-full max-w-lg p-6 space-y-4">
         
         {/* Logo and Title */}
         <div className="flex flex-col items-center">
           <img
             src={Logo} // Replace with actual logo source
             alt="ParkEase Logo"
-            className="w-24 mb-4"
+            className="w-24 h-12 mb-4"
           />
-          <hr className="w-full border-t border-gray-300 my-2" />
+          <hr className="w-full border-t border-dotted border-black my-2" />
           <h1 className="text-2xl font-semibold text-gray-800">Booking Receipt</h1>
-          <hr className="w-full border-t border-gray-300 my-2" />
+          <hr className="w-full border-t border-dotted border-black my-2" />
         </div>
         
         {/* Receipt Information */}
@@ -31,8 +31,7 @@ function BookingReceipt() {
           <p><span className="font-semibold">Slot Allotted:</span> L1/0A/06</p>
         </div>
 
-        <hr className="w-full border-t border-gray-300 my-4" />
-        
+        <hr className="w-full border-t border-dotted border-black my-4" />        
         {/* Thank You Note */}
         <div className="text-center">
           <p className="text-lg font-semibold text-gray-800">THANK YOU & DRIVE SAFELY!!</p>

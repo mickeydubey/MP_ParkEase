@@ -1,22 +1,23 @@
 import React from 'react';
+import Img from '../../assets/user.png';
 
 const AdminSignIn = () => {
   return (
-    <div className="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+    <div className="bg-gray-100 flex items-center justify-center min-h-screen p-4 ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 mt-24">
         
         {/* Illustration Section */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-10/12 flex justify-center">
           {/* Replace the src with your image URL */}
           <img
-            src="your-image-url-here.png"
+            src={Img}
             alt="Parking Illustration"
             className="max-w-full h-auto"
           />
         </div>
 
         {/* Form Section */}
-        <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+        <div className="w-auto md:w-5/6 bg-white p-4 rounded-3xl shadow-md border border-black">
           <h2 className="text-2xl font-bold text-center mb-4">Admin Sign In</h2>
           
           <form className="space-y-4">
@@ -77,7 +78,7 @@ const AdminSignIn = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition duration-200"
+              className="w-1/2 ml-36 bg-[#2F3645] text-white p-2 rounded-lg  transition duration-200"
             >
               Sign In
             </button>

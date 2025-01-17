@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProfileDetails = () => {
   return (
-    <div className="max-w-4xl p-6 bg-white shadow-md rounded-lg border border-gray-300 mt-48 mx-auto">
+    <div className="max-w-4xl p-6 bg-white shadow-md rounded-lg border border-black mt-48 mx-auto">
       <div className="flex flex-col md:flex-row items-center md:items-start mb-6 space-y-4 md:space-y-0 md:space-x-6">
         
         {/* Profile Picture */}
@@ -41,7 +41,7 @@ const ProfileDetails = () => {
               <input
                 type="text"
                 placeholder="First Name"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -49,7 +49,7 @@ const ProfileDetails = () => {
               <input
                 type="text"
                 placeholder="Last Name"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -63,7 +63,7 @@ const ProfileDetails = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -71,7 +71,7 @@ const ProfileDetails = () => {
               <input
                 type="text"
                 placeholder="Contact No."
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -86,7 +86,7 @@ const ProfileDetails = () => {
               <input
                 type="password"
                 placeholder="Current Password"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -94,7 +94,7 @@ const ProfileDetails = () => {
               <input
                 type="password"
                 placeholder="New Password"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ const ProfileDetails = () => {
 
         {/* Save Button */}
         <div className="col-span-1 sm:col-span-2 flex justify-center mt-6">
-          <button className="px-10 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <button className="px-10 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 ">
             Save
           </button>
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Profile_Details = () => {
   return (
-    <div className="max-w-4xl p-6 bg-white shadow-md rounded-3xl border border-gray-300 mt-36 mx-auto">
+    <div className="max-w-4xl p-6 bg-white shadow-md rounded-3xl border border-black mt-36 mx-auto">
       <div className="flex flex-col md:flex-row items-center md:items-start mb-6 space-y-4 md:space-y-0 md:space-x-6">
         
         {/* Profile Picture */}
@@ -40,7 +40,7 @@ const Profile_Details = () => {
               <input
                 type="text"
                 placeholder="ID"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -48,7 +48,7 @@ const Profile_Details = () => {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ const Profile_Details = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -70,7 +70,7 @@ const Profile_Details = () => {
               <input
                 type="text"
                 placeholder="Contact No."
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -85,7 +85,7 @@ const Profile_Details = () => {
               <input
                 type="password"
                 placeholder="Current Password"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
             <div>
@@ -93,7 +93,7 @@ const Profile_Details = () => {
               <input
                 type="password"
                 placeholder="New Password"
-                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ const Profile_Details = () => {
               By deleting your account you will lose all your data
             </p>
           </div>
-          <button className="px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500">
+          <button className="px-4 py-2 bg-[#2F3645] text-white rounded-md hover:bg-gray-500">
             Delete Account
           </button>
         </div>

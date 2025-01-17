@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const LocationPage = () => {
     const navigate = useNavigate();
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+    <div className="flex items-center justify-center min-h-screen w-full p-4 mt-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center  gap-20">
         
         {/* Form Section */}
-        <div className="w-full md:w-1/3 bg-white p-8 md:p-10 rounded-3xl border border-gray-300 shadow-lg">
+        <div className="w-full md:w-1/3 p-8 md:p-10 rounded-3xl border border-black shadow-lg">
           <h2 className="text-2xl font-bold text-center mb-6">Location</h2>
           
           <form className="space-y-6">

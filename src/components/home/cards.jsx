@@ -1,5 +1,8 @@
 import React from 'react'
-import Image from "../../assets/react.svg"
+import Image from "../../assets/Wallet.png"
+import T from "../../assets/time.png"
+import Tu from "../../assets/Thumb Up.png"
+
 
 const Cards = () => {
   return (
@@ -17,7 +20,7 @@ const Cards = () => {
             className="bg-[#EEEDEB] rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 flex "
           >
             <div className='flex justify-center items-center'>
-                <img src={Image} className='w-10 h-10 m-8'/>
+                <img src={Image} className='w-14 h-14 m-10 '/>
             </div>
             <div className='flex justify-center items-center flex-col mr-3'>
                 <div className='text-xl font-semibold self-start'>Save Money</div>
@@ -30,11 +33,11 @@ const Cards = () => {
             className="bg-[#EEEDEB] rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 flex "
           >
             <div className='flex justify-center items-center'>
-                <div className='w-10 h-10 bg-slate-500 m-8'></div>
+            <img src={T} className='w-14 h-14 m-12 '/>
             </div>
             <div className='flex justify-center items-center flex-col mr-3'>
-                <div className='text-xl font-semibold self-start'>Save Money</div>
-                <div>Save up to 70% on our site compared to the cost of on-airport parking.</div>
+                <div className='text-xl font-semibold self-start'>Save Time</div>
+                <div>It’s easy to compare parking at all major airports. Booking a reservation is quick & simple!</div>
             </div>
           </div>
 
@@ -43,11 +46,11 @@ const Cards = () => {
            className="bg-[#EEEDEB] rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 flex "
          >
            <div className='flex justify-center items-center'>
-               <div className='w-10 h-10 bg-slate-500 m-8'></div>
+           <img src={Tu} className='w-14 h-14 m-12 '/>
            </div>
            <div className='flex justify-center items-center flex-col mr-3'>
-               <div className='text-xl font-semibold self-start'>Save Money</div>
-               <div>Save up to 70% on our site compared to the cost of on-airport parking.</div>
+               <div className='text-xl font-semibold self-start'>Save stress</div>
+               <div>Guarantee your parking spot by booking in advance. Can’t make it? Cancellations are free.</div>
            </div>
          </div>
        

@@ -1,26 +1,20 @@
 // ParkingFeesCard.js
 import React from 'react';
-import Layout from './../layout';  // Update with the correct path if necessary
-
+import CAR from '../../assets/car.png'
+import CAR1 from '../../assets/car1.png'
 function ParkingFeesCard() {
   return (
     <><div>
-          <div className="flex flex-col  p-0  ">
-              <div className="bg-gray-300 rounded-lg shadow-lg w-full max-w-md p-6 absolute left-72 mt-56">
-                  {/* Image Section */}
-                  <div className="flex justify-center mb-4">
-                      <div className="relative">
-                          <img
-                              src="car-icon.png" // Replace with actual car image path
-                              alt="Car Icon"
-                              className="h-20 mx-auto" />
-                          <img
-                              src="parking-sign.png" // Replace with actual parking sign image path
-                              alt="Parking Sign"
-                              className="h-8 absolute right-0 top-0 transform translate-y-2" />
-                      </div>
-                  </div>
-
+        <div className="flex flex-col w-full p-0">
+          <div className="bg-gray-300 rounded-lg shadow-xl w-full max-w-sm  absolute left-80 mt-56 border border-gray">
+            {/* Image Section */}
+            <div className="w-full mb-4">
+              <img
+                src={CAR} // Replace with the actual car image path
+                alt="Car Icon"
+                className="w-full h-auto object-cover rounded-t-lg" // Ensures full width and rounded top corners
+              />
+            </div>
                   {/* Pricing Table */}
                   <table className="w-full text-center">
                       <thead>
@@ -53,18 +47,15 @@ function ParkingFeesCard() {
       </div>
       <div>
               <div className="flex flex-col  p-0  ">
-                  <div className="bg-gray-300 rounded-lg shadow-lg w-full max-w-md p-6 absolute right-10 mt-96">
+                  <div className="bg-gray-300 rounded-lg shadow-xl w-full max-w-sm  absolute  border border-gray right-20 mt-80">
                       {/* Image Section */}
                       <div className="flex justify-center mb-4">
                           <div className="relative">
                               <img
-                                  src="car-icon.png" // Replace with actual car image path
+                                  src={CAR1} // Replace with actual car image path
                                   alt="Car Icon"
-                                  className="h-20 mx-auto" />
-                              <img
-                                  src="parking-sign.png" // Replace with actual parking sign image path
-                                  alt="Parking Sign"
-                                  className="h-8 absolute right-0 top-0 transform translate-y-2" />
+                                  className="w-full h-auto object-cover rounded-t-lg" />
+                              
                           </div>
                       </div>
 
@@ -79,19 +70,19 @@ function ParkingFeesCard() {
                           <tbody>
                               <tr>
                                   <td className="p-2 border-b">0-1 hours</td>
-                                  <td className="p-2 border-b">50rs</td>
+                                  <td className="p-2 border-b">30rs</td>
                               </tr>
                               <tr>
                                   <td className="p-2 border-b">1-2 hours</td>
-                                  <td className="p-2 border-b">100rs</td>
+                                  <td className="p-2 border-b">60rs</td>
                               </tr>
                               <tr>
                                   <td className="p-2 border-b">2-3 hours</td>
-                                  <td className="p-2 border-b">150rs</td>
+                                  <td className="p-2 border-b">90rs</td>
                               </tr>
                               <tr>
                                   <td className="p-2">3+ hours</td>
-                                  <td className="p-2">200rs</td>
+                                  <td className="p-2">120rs</td>
                               </tr>
                           </tbody>
                       </table>
