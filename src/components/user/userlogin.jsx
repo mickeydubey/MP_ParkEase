@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import CarImage from '../../assets/carillustration.svg'; // Ensure this path is correct
+import CarImage from '../../assets/carillustration.svg';
 
 const UserLogin = () => {
   const navigate = useNavigate();
-  const [userId, setUserId] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState(''); // Fixed syntax error here
   const [isLoading, setIsLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -16,8 +16,8 @@ const UserLogin = () => {
   };
 
   const validateForm = () => {
-    if (!userId || !password) {
-      setError('Both User ID and Password are required.');
+    if (!username || !password) {
+      setError('Both Username and Password are required.');
       return false;
     }
     setError('');
@@ -32,7 +32,7 @@ const UserLogin = () => {
 
     try {
       const response = await axios.post('http://localhost:3000/api/users/login', {
-        user_id: userId,
+        username: username,
         password: password,
       });
 
@@ -42,7 +42,7 @@ const UserLogin = () => {
         // Save the token in local storage
         localStorage.setItem('authToken', token);
 
-        // Navigate to the student profile page
+        // Navigate to the location page
         navigate('/location');
       } else {
         setError('Invalid credentials. Please try again.');
@@ -70,17 +70,16 @@ const UserLogin = () => {
           {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
           <form className="space-y-7" onSubmit={handleSubmit}>
-            {/* User ID Input */}
+            {/* Username Input */}
             <div>
-              <label htmlFor="userId" className="block text-gray-600 mb-1">User ID</label>
+              <label htmlFor="username" className="block text-gray-600 mb-1">Username</label>
               <input
                 type="text"
-                id="userId"
-                name="userId"
-                value={userId}
-                onChange={(e) => setUserId(e.target.value)}
+                id="username"
+                name="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="w-full border border-gray-300 p-1 rounded-lg focus:outline-none focus:border-blue-500"
-                
               />
             </div>
 
@@ -95,7 +94,6 @@ const UserLogin = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full border border-gray-300 p-1 rounded-lg focus:outline-none focus:border-blue-500"
-                
                 />
                 <button
                   type="button"

@@ -37,7 +37,7 @@ import Password_ResetForm from './components/user/new_pass';
 import Password_ResetSuccess from './components/user/pass_resetsucess';
 import ParkingApp from './components/user/location';
 import SlotBooking from './components/user/slotbooking';
-import BookingConfirmation from './components/user/bookingconfrimation';
+import BookingConfirmation from './components/user/BookingConfirmation';
 import BookingReceipt from './components/user/bookingreceipt';
 import ParkingFeesCard from './components/user/parkingcost';
 import ParkingTable from './components/user/bookinghistory';
@@ -88,7 +88,7 @@ function App() {
     <Route path="/new_pass" element={<Password_ResetForm/>} />
     <Route path="/pass_resetsucess" element={<Password_ResetSuccess />} />
     <Route path="/location" element={<ParkingApp />} />
-    <Route path="/bookingconfrimation" element={<BookingConfirmation />} />
+    <Route path="/bookingconfirmation" element={<BookingConfirmation />} />
     <Route path="/bookingreceipt" element={<BookingReceipt />} />
         
         <Route element={<Layout />}>
