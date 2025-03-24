@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const Adminpage = () => {
@@ -12,6 +13,7 @@ const Adminpage = () => {
                 
             </div>
         </div>
+
 
          </div>
     </div>
