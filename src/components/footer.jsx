@@ -1,5 +1,8 @@
 import React from 'react'
 import Logo from "../assets/logo.png"
+import X from "../assets/X.png"
+import F from "../assets/F.png"
+import I from "../assets/I.png"
 
 const Footer = () => {
   return (
@@ -10,9 +13,15 @@ const Footer = () => {
         </div>
         <div className=''>
             <div className='flex gap-10 m-10' >
-                <div className='w-10 h-10  bg-black'></div>
-                <div className='w-10 h-10 bg-black'></div>
-                <div className='w-10 h-10 bg-black'></div>
+            <div className="w-10 h-10 rounded-full bg-white">
+    <img src={X} alt="Parking Icon" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-10 h-10 rounded-full bg-white">
+    <img src={F} alt="Parking Icon" className="w-full h-full object-cover" />
+  </div>
+  <div className="w-10 h-10 rounded-full bg-white">
+    <img src={I} alt="Parking Icon" className="w-full h-full object-cover" />
+  </div>
             </div>
         </div>
       </div>

@@ -3,8 +3,8 @@ import Adminpage from '../components/admin/admin'
 
 const Admin = () => {
   return (
-    <div>
-     <Adminpage/>
+    <div className='overflow-y-auto '>
+     <Adminpage className='overflow-y-hidden'/>
     </div>
   )
 }
