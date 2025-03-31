@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import axiosInstance from "./../../lib/axiosInstance.js"
 
 const Email_Verification = () => {
   const [code, setCode] = useState(new Array(5).fill(''));
@@ -22,17 +23,27 @@ const Email_Verification = () => {
   const handleResend = () => {
     console.log("Resend email");
   };
-
-  const handleVerify = () => {
+  const location = useLocation();
+  const email = location.state?.email;
+  const handleVerify = async () => {
     const verificationCode = code.join('');
-    console.log("Verify code", verificationCode);
-    
-    // Check if code is complete
-    if (verificationCode.length === 5) {
-      // Navigate to the password reset page
-      navigate('/pass_reset');
-    } else {
-      alert('Please enter the complete 5-digit code.');
+    if (verificationCode.length !== 6) {
+      alert("Please enter the full 6-digit code.");
+      return;
+    }
+  
+    try {
+      const response = await axiosInstance.post('/verify-otp', {
+        email,
+        otp: verificationCode,
+      });
+  
+      if (response.status === 200) {
+        alert('OTP verified!');
+        navigate('/pass_reset', { state: { email } });
+      }
+    } catch (error) {
+      alert(error.response?.data?.error || 'Invalid OTP');
     }
   };
 

@@ -62,6 +62,16 @@ function Layout1() {
            </span>
             <span>Revenue</span>
           </Link>
+          <Link to="/slotbookinghistory" className="flex items-center space-x-3 text-gray-800 hover:text-blue-600 font-semibold">
+          <span className="flex items-center">
+         <img 
+           src={R} // Replace with your actual image path
+           alt="Seat Icon" 
+           className="h-6 w-6 object-contain" // Adjust size as needed
+           />
+           </span>
+            <span>Slot Booking History</span>
+          </Link>
           <Link to="/manageparking" className="flex items-center space-x-3 text-gray-800 hover:text-blue-600 font-semibold">
           <span className="flex items-center">
          <img 
