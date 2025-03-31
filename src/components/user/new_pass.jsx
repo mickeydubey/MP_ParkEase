@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import axiosInstance from "./../../lib/axiosInstance.js"
 
 function Password_ResetForm() {
   const [password, setPassword] = useState('');
@@ -10,13 +11,25 @@ function Password_ResetForm() {
 
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
-
-  const handleSubmit = () => {
-    if (password === confirmPassword && password.length > 0) {
-      // Navigate to the Password Reset Success page
-      navigate('/pass_resetsucess');
-    } else {
-      alert("Passwords do not match or are empty.");
+  const location = useLocation();
+  const email = location.state?.email;
+  const handleSubmit = async () => {
+    if (password !== confirmPassword || !password) {
+      return alert("Passwords do not match or are empty.");
+    }
+  
+    try {
+      const response = await axiosInstance.post('/reset-password', {
+        email,
+        newPassword: password,
+      });
+  
+      if (response.status === 200) {
+        alert("Password reset successful!");
+        navigate('/pass_resetsucess');
+      }
+    } catch (error) {
+      alert(error.response?.data?.error || "Error resetting password.");
     }
   };
 

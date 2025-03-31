@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axiosInstance from "./../../lib/axiosInstance.js"
 
 const Forgot_Password = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
-  const handleResetPassword = (e) => {
+
+  const handleResetPassword = async (e) => {
     e.preventDefault();
-    // Here, implement the logic to send a reset password link to the email
-    console.log('Reset link sent to:', email);
-    
-    // Navigate to email verification page after sending the reset link
-    navigate('/email-verification');
+  
+    try {
+      const response = await axiosInstance.post('/api/users/send-otp', { email });
+  
+      if (response.status === 200) {
+        alert('OTP sent to your email!');
+        navigate('/email_verification', { state: { email } }); // ✅ Pass email to next page
+      }
+    } catch (error) {
+      alert(error.response?.data?.error || 'Failed to send OTP');
+    }
   };
+  
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

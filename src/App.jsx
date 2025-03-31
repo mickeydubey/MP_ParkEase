@@ -44,6 +44,7 @@ import ParkingTable from './components/user/bookinghistory';
 import ProfileDetails from './components/user/accountsetting';
 import ParkingLot from './components/user/spacesection';
 import './App.css'; // Importing the CSS styles for the application
+import ParkingTableadmin from './components/admin/SLotbookinghistory';
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route path="/setting" element={<Profile_Details/>} />
           <Route path="/revenue" element={<Revenue/>} />
           <Route path="/manageparking" element={<Tool_bar/>} />
+          <Route path="/slotbookinghistory" element={<ParkingTableadmin/>} />
           
           
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../../lib/axiosInstance';
 
-const ParkingTable = () => {
+const ParkingTableadmin = () => {
   const [parkingData, setParkingData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
@@ -9,7 +9,7 @@ const ParkingTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get('/api/userslotbooking');
+        const response = await axiosInstance.get('/api/slotbooking');
         setParkingData(response.data);
       } catch (error) {
         console.error('Error fetching parking data:', error);
@@ -108,4 +108,4 @@ const ParkingTable = () => {
   );
 };
 
-export default ParkingTable;
+export default ParkingTableadmin;

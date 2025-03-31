@@ -52,11 +52,11 @@ const AdminSignIn = () => {
 
     try {
       const { confirmPassword, ...dataToSend } = formData; // Exclude confirmPassword from submission
-      const response = await axios.post('http://localhost:3000/api/admin/loginadmin', dataToSend, {
+      const response = await axios.post('http://localhost:3000/api/admin/signupadmin', dataToSend, {
         headers: { 'Content-Type': 'application/json' },
       })
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         setSuccess('Admin signed in successfully! Redirecting...');
         setTimeout(() => navigate('/adminlogin'), 2000); // Redirect after 2s
       }
