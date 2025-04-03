@@ -27,18 +27,18 @@ const Email_Verification = () => {
   const email = location.state?.email;
   const handleVerify = async () => {
     const verificationCode = code.join('');
-    if (verificationCode.length !== 6) {
+    if (verificationCode.length !== 5) {
       alert("Please enter the full 6-digit code.");
       return;
     }
   
     try {
-      const response = await axiosInstance.post('/verify-otp', {
+      const response = await axiosInstance.post('http://localhost:3000/api/users/verify-otp', {
         email,
         otp: verificationCode,
       });
   
-      if (response.status === 200) {
+      if (response.status == 200) {
         alert('OTP verified!');
         navigate('/pass_reset', { state: { email } });
       }

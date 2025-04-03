@@ -11,11 +11,12 @@ const Forgot_Password = () => {
     e.preventDefault();
   
     try {
-      const response = await axiosInstance.post('/api/users/send-otp', { email });
+      const response = await axiosInstance.post('http://localhost:3000/api/users/send-otp', { email });
   
-      if (response.status === 200) {
+      if (response.status == 200) {
+        console.log("inside");
         alert('OTP sent to your email!');
-        navigate('/email_verification', { state: { email } }); // ✅ Pass email to next page
+        navigate('/email_verify', { state: { email } }); // ✅ Pass email to next page
       }
     } catch (error) {
       alert(error.response?.data?.error || 'Failed to send OTP');
@@ -42,7 +43,7 @@ const Forgot_Password = () => {
           />
           
           <button
-            onClick={() => navigate('/email_verify')}
+            // onClick={() => navigate('/email_verify')}
             type="submit"
             className="w-full bg-[#2F3645] text-white font-semibold py-3 rounded-md hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700"
           >

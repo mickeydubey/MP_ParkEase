@@ -17,9 +17,10 @@ function Password_ResetForm() {
     if (password !== confirmPassword || !password) {
       return alert("Passwords do not match or are empty.");
     }
+  console.log("mail",email);
   
     try {
-      const response = await axiosInstance.post('/reset-password', {
+      const response = await axiosInstance.post('http://localhost:3000/api/users/reset-password', {
         email,
         newPassword: password,
       });

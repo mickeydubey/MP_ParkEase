@@ -5,8 +5,9 @@ const ProfileDetails = () => {
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
+    username:"",
     email: "",
-    contactNo: "",
+    phone: "",
     currentPassword: "",
     newPassword: "",
   });
@@ -40,7 +41,7 @@ const ProfileDetails = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!profile.contactNo.trim()) {
+    if (!profile.phone.trim()) {
       alert("❌ Contact number is required!");
       return;
     }
@@ -89,13 +90,13 @@ const ProfileDetails = () => {
         // ✍️ Editable Form
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="col-span-1 sm:col-span-2">
-            <label className="text-gray-700 font-semibold">Full name</label>
+            {/* <label className="text-gray-700 font-semibold">User name</label> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-1">
               <div>
                 <label className="block text-sm text-gray-600">User name</label>
                 <input
                   type="text"
-                  name="firstName"
+                  name="username"
                   value={profile.username}
                   onChange={handleChange}
                   placeholder="First Name"
@@ -123,8 +124,8 @@ const ProfileDetails = () => {
               <div>
                 <label className="block text-sm text-gray-600">Contact No. (Required)</label>
                 <input
-                  type="text"
-                  name="contactNo"
+                  type="number"
+                  name="phone"
                   value={profile.phone}
                   onChange={handleChange}
                   placeholder="Contact No."

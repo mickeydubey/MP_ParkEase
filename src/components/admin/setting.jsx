@@ -19,7 +19,9 @@ const Profile_Details = () => {
   useEffect(() => {
     const fetchAdminProfile = async () => {
       try {
-        const response = await axiosInstance.get('/api/admin/profile');
+        const response = await axiosInstance.get('/api/admin/adminprofile');
+        console.log("profile:",response);
+        
         setProfile(prev => ({ ...prev, ...response.data }));
       } catch (error) {
         console.error('Failed to fetch admin profile:', error);

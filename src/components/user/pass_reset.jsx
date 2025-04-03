@@ -1,12 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Password_ResetConfirmation = () => {
   const navigate = useNavigate();
+   const location = useLocation();
+  const email = location.state?.email;
 
   const handleConfirm = () => {
     // Navigate to the page where the user sets a new password, or wherever you want to redirect.
-    navigate('/new_pass');
+    navigate('/new_pass', { state: { email } });
   };
 
   return (

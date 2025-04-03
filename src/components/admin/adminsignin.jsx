@@ -8,7 +8,7 @@ const AdminSignIn = () => {
 
   const [formData, setFormData] = useState({
     email: '',
-    id: '',
+    admin_id: '',
     phone: '',
     password: '',
     confirmPassword: '',
@@ -25,8 +25,8 @@ const AdminSignIn = () => {
 
   // Validate form fields
   const validateForm = () => {
-    const { email, id, phone, password, confirmPassword } = formData;
-    if (!email || !id || !phone || !password || !confirmPassword) {
+    const { email, admin_id, phone, password, confirmPassword } = formData;
+    if (!email || !admin_id || !phone || !password || !confirmPassword) {
       setError('All fields are required.');
       return false;
     }
@@ -52,11 +52,13 @@ const AdminSignIn = () => {
 
     try {
       const { confirmPassword, ...dataToSend } = formData; // Exclude confirmPassword from submission
+      console.log("form",dataToSend);
+      
       const response = await axios.post('http://localhost:3000/api/admin/signupadmin', dataToSend, {
         headers: { 'Content-Type': 'application/json' },
       })
 
-      if (response.status === 201) {
+      if (response.status == 201) {
         setSuccess('Admin signed in successfully! Redirecting...');
         setTimeout(() => navigate('/adminlogin'), 2000); // Redirect after 2s
       }
@@ -101,8 +103,8 @@ const AdminSignIn = () => {
               <label htmlFor="id" className="block text-gray-600 mb-1">ID</label>
               <input
                 type="text"
-                id="id"
-                name="id"
+                id="admin_id"
+                name="admin_id"
                 value={formData.id}
                 onChange={handleChange}
                 className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500"
