@@ -4,7 +4,7 @@ const ParkingDashboard = () => {
   // Dummy data for available and occupied slots
   const slots = Array(30).fill(true).map((_, index) => ({
     id: index,
-    isOccupied: index % 2 === 0, // Occupied for even-indexed slots
+    isOccupied: index % 2 === 0, // Occupied for even-indexed slots 
   }));
 
   return (

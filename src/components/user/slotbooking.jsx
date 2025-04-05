@@ -248,7 +248,7 @@ const SlotBooking = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="slot_no" className="block text-sm font-medium text-gray-700">Slot Number</label>
                 <input
                   type="text"
@@ -259,7 +259,7 @@ const SlotBooking = () => {
                   placeholder="Slot number"
                   required
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -276,7 +276,7 @@ const SlotBooking = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="date" className="block text-sm font-medium text-gray-700">Date</label>
                 <input
                   type="date"
@@ -286,7 +286,7 @@ const SlotBooking = () => {
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                   required
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -303,7 +303,7 @@ const SlotBooking = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="time" className="block text-sm font-medium text-gray-700">Time</label>
                 <input
                   type="time"
@@ -313,7 +313,7 @@ const SlotBooking = () => {
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                   required
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-6">
@@ -326,7 +326,7 @@ const SlotBooking = () => {
             </div>
           </form>
         </div>
-      </main>
+      </main> 
     </div>
   );
 };

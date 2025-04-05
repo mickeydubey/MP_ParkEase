@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary modules from react-router-dom
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 
 import Home from './pages/home';
 import Contactus from './pages/contactus';
@@ -37,14 +37,23 @@ import Password_ResetForm from './components/user/new_pass';
 import Password_ResetSuccess from './components/user/pass_resetsucess';
 import ParkingApp from './components/user/location';
 import SlotBooking from './components/user/slotbooking';
-import BookingConfirmation from './components/user/BookingConfirmation';
-import BookingReceipt from './components/user/bookingreceipt';
+// import BookingConfirmation from './components/user/BookingConfirmation';
+// import BookingReceipt from './components/user/bookingreceipt';
 import ParkingFeesCard from './components/user/parkingcost';
 import ParkingTable from './components/user/bookinghistory';
 import ProfileDetails from './components/user/accountsetting';
 import ParkingLot from './components/user/spacesection';
 import './App.css'; // Importing the CSS styles for the application
 import ParkingTableadmin from './components/admin/SLotbookinghistory';
+
+import ParkingList from './components/DK/ParkingList';
+import BookingForm from './components/DK/BookingForm';
+
+import TotalBookings from './components/DK/TotalBookings';
+import SlotSelection from './components/DK/SlotSelection';
+
+import BookingConfirmation from './components/DK/BookingConfirmation';
+import BookingReceipt from './components/DK/BookingReceipt';
 
 function App() {
   return (
@@ -53,7 +62,7 @@ function App() {
 <Navbar/>
     <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/contactus" element={<Contactus />} />
+    <Route path="/contactus" element={<Contactus />} /> 
     <Route path="/aboutus" element={<AboutUs />} />
 
     <Route path="/services" element={<Service />} />
@@ -68,9 +77,13 @@ function App() {
     <Route path="/newpass" element={<PasswordResetForm/>} />
     <Route path="/passwordresetsucess" element={<PasswordResetSuccess />} />
 
+
+        <Route path="/confirmation" element={<BookingConfirmation />} />
+        <Route path="/receipt" element={<BookingReceipt />} />
+
     <Route element={<Layout1 />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/spaceallotment" element={<ParkingDashboard />} />
+          <Route path="/spaceallotment" element={<TotalBookings />} />
           <Route path="/vehicle" element={<Toolbar/>} />
           <Route path="/setting" element={<Profile_Details/>} />
           <Route path="/revenue" element={<Revenue/>} />
@@ -89,17 +102,17 @@ function App() {
     <Route path="/pass_reset" element={<Password_ResetConfirmation/>} />
     <Route path="/new_pass" element={<Password_ResetForm/>} />
     <Route path="/pass_resetsucess" element={<Password_ResetSuccess />} />
-    <Route path="/location" element={<ParkingApp />} />
-    <Route path="/bookingconfirmation" element={<BookingConfirmation />} />
-    <Route path="/bookingreceipt" element={<BookingReceipt />} />
+    <Route path="/location" element={<ParkingList />} />
+    {/* <Route path="/bookingconfirmation" element={<BookingConfirmation />} /> */}
+    {/* <Route path="/bookingreceipt" element={<BookingReceipt />} /> */}
         
         <Route element={<Layout />}>
-          <Route path="/slotbooking" element={<SlotBooking />} />
+          <Route path="/slotbooking/:locationName" element={<BookingForm />} />
           <Route path="/parkingcost" element={<ParkingFeesCard />} />
           <Route path="/bookinghistory" element={<ParkingTable/>} />
           <Route path="/accountsetting" element={<ProfileDetails/>} />
-          <Route path="/spacesection" element={<ParkingLot/>} />
-        </Route>
+          <Route path="/spacesection/:locationName/slot" element={<SlotSelection />} />
+        </Route> 
       
 
     

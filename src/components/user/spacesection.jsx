@@ -42,12 +42,12 @@ function ParkingLot() {
 
         {/* Parking Grid */}
         <div className="grid grid-cols-3 gap-4 lg:grid-cols-6">
-          {Array.from({ length: 30 }, (_, index) => (
+          {Array.from({ length: 60 }, (_, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center w-20 h-20 bg-gray-700 rounded-md p-1 ${
-                index % 2 === 0 ? 'bg-gray-700' : 'bg-white'
-              } border border-gray-400`}
+              className={`flex flex-col items-center justify-center w-20 h-10 bg-white rounded-md p-1 
+                
+              border border-gray-400`}
             >
               {/* Car Image */}
               <img
@@ -55,14 +55,7 @@ function ParkingLot() {
                 alt="Car"
                 className="w-10 h-12 mb-1"
               />
-              {/* Divider */}
-              <div className="w-full h-px bg-gray-400 my-1"></div>
-              {/* Another Car Image */}
-              <img
-                src={car}
-                alt="Car"
-                className="w-10 h-12"
-              />
+            
             </div>
           ))}
         </div>
