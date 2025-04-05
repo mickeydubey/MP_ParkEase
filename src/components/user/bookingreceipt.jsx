@@ -6,7 +6,7 @@ import Bar from '../../assets/barcode.png';
 const BookingReceipt = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
-
+ 
   // If no state data is passed, redirect back to slot booking
   if (!state || !state.receiptData) {
     navigate('/slotbooking');
